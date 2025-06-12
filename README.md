@@ -53,6 +53,6 @@ Follow these steps to get the project up and running on your local machine.
 ### 1. Clone the Repository
 
 ```bash
-git clone <repository-url>
+git clone <https://github.com/ZamNkombisa/user-task-app.git>
 cd user-task-manager-app
 ```
