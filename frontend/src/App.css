@@ -1,0 +1,180 @@
+.App {
+  max-width: 900px; /* Constrain max width for better readability */
+  margin: 40px auto; /* Center the app and add vertical margin */
+  padding: 20px;
+  background-color: #ffffff; /* White background for the app container */
+  border-radius: 12px; /* Rounded corners for the main app container */
+  box-shadow: 0 10px 30px var(--shadow-color); /* More pronounced shadow for depth */
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color); /* Use primary color for the main heading */
+  text-align: center;
+  margin-bottom: 2.5rem; /* More space below heading */
+}
+
+/* Card Styling */
+.card {
+  border: none; /* Remove default Bootstrap border */
+  border-radius: 10px; /* Slightly more rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Lighter shadow for inner cards */
+  margin-bottom: 1.5rem; /* Consistent spacing between cards */
+  overflow: hidden; /* Ensures rounded corners are respected */
+}
+
+.card-header {
+  background-color: var(--background-dark); /* Slightly darker background for header */
+  color: var(--text-color);
+  font-weight: 600;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+/* Input Group & Button Styling */
+.input-group .form-control {
+  border-radius: 0.5rem 0 0 0.5rem; /* Match card radius on left */
+  border: 1px solid var(--border-color);
+  box-shadow: none; /* Remove default focus shadow */
+}
+
+.input-group .form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.25rem rgba(106, 103, 241, 0.25); /* Custom focus shadow */
+}
+
+.input-group .btn {
+  border-radius: 0 0.5rem 0.5rem 0; /* Match card radius on right */
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+.btn-primary:hover {
+  background-color: darken(var(--primary-color), 10%); /* Custom hover */
+  border-color: darken(var(--primary-color), 10%);
+}
+
+.btn-success {
+  background-color: #28a745; /* Keeping a standard green for success */
+  border-color: #28a745;
+}
+.btn-success:hover {
+  background-color: darken(#28a745, 10%);
+  border-color: darken(#28a745, 10%);
+}
+
+/* List Group Styling */
+.list-group-flush .list-group-item {
+  border-left: none;
+  border-right: none;
+  padding: 1rem 1.5rem;
+  background-color: transparent; /* Ensure no default background */
+}
+
+.list-group-flush .list-group-item:last-child {
+  border-bottom: none; /* Remove border for cleaner look */
+}
+
+.list-group-item-action {
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.list-group-item-action:hover {
+  background-color: var(--background-dark); /* Subtle hover background */
+  transform: translateX(5px); /* Gentle slide on hover */
+}
+
+.list-group-item.active {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  color: #ffffff !important; /* White text for active item */
+  font-weight: 500;
+}
+
+/* Task List Styling */
+.list-group-item.d-flex.justify-content-between.align-items-center {
+  padding: 0.8rem 1.5rem; /* Slightly smaller padding for task items */
+  border-top: 1px solid var(--border-color); /* Add top border for separation */
+}
+
+.list-group-item.d-flex.justify-content-between.align-items-center:first-child {
+    border-top: none; /* No top border for the very first item */
+}
+
+
+/* Form Check (for tasks) */
+.form-check {
+    margin-right: 1rem; /* Space between checkbox and text */
+    min-width: 0; /* Allow content to shrink */
+    cursor: pointer;
+    user-select: none; /* Prevent text selection on click */
+}
+
+.form-check-input {
+    margin-top: 0.25em; /* Adjust alignment slightly */
+    border-color: var(--light-text-color); /* Custom checkbox border */
+    transition: all 0.2s ease;
+}
+
+.form-check-input:checked {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.form-check-label {
+    font-weight: 500;
+    cursor: pointer;
+    padding-left: 0.5rem; /* Space between input and label text */
+    display: inline-block; /* Ensure padding works */
+}
+
+/* Strikethrough for completed tasks */
+.text-decoration-line-through {
+  color: var(--light-text-color) !important; /* Make completed text lighter */
+  font-style: italic; /* Add italic for extra visual cue */
+  text-decoration-thickness: 1.5px; /* Make strikethrough a bit bolder */
+}
+
+/* Task Buttons */
+.btn-group-sm .btn {
+  font-size: 0.8rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 5px; /* Small rounded corners for buttons */
+}
+
+.btn-info {
+  background-color: #17a2b8; /* Standard info blue */
+  border-color: #17a2b8;
+}
+.btn-info:hover {
+    background-color: darken(#17a2b8, 10%);
+    border-color: darken(#17a2b8, 10%);
+}
+
+.btn-danger {
+  background-color: #dc3545; /* Standard danger red */
+  border-color: #dc3545;
+}
+.btn-danger:hover {
+    background-color: darken(#dc3545, 10%);
+    border-color: darken(#dc3545, 10%);
+}
+
+/* Edit Task Input */
+.input-group.w-75 .form-control {
+    border-radius: 0.5rem;
+}
+.input-group.w-75 .btn-outline-success,
+.input-group.w-75 .btn-outline-secondary {
+    border-radius: 0.5rem;
+    margin-left: 0.5rem;
+}

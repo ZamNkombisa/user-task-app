@@ -1,0 +1,54 @@
+/* Google Fonts: Poppins for headings, Inter for body text */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+  /* Color Palette */
+  --primary-color: #6a67f1;
+  --secondary-color: #f1676a;
+  --text-color: #343a40;
+  --light-text-color: #6c757d;
+  --background-light: #f8f9fa;
+  --background-dark: #e9ecef;
+  --border-color: #dee2e6;
+  --shadow-color: rgba(0, 0, 0, 0.08);
+
+  /* Fonts */
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-light);
+  font-family: var(--font-body); /* Apply body font globally */
+  color: var(--text-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading); /* Apply heading font */
+  color: var(--text-color);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--background-light);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--light-text-color);
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text-color);
+}
