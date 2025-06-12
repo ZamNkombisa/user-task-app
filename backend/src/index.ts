@@ -5,11 +5,14 @@ import { AppDataSource } from "./database";
 import userRoutes from "./routes/users";
 import { Request, Response, NextFunction } from "express";
 
+
+const FRONTEND_URL = 'https://user-task-app-frontend-ix8i.onrender.com';
+
 const app = express();
 
 // Enable CORS for frontend origin
 app.use(cors({
-    origin: 'http://localhost:3001',
+    origin: FRONTEND_URL,
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
 }));
